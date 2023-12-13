@@ -7,7 +7,7 @@ import { useState } from "react";
 import Rightbar from "./components/RightBar";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
 
   const darkTheme = createTheme({
     palette: {
