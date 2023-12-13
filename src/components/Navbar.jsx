@@ -41,7 +41,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = ({ mode }) => {
   const [open, setOpen] = useState(false);
   return (
     <AppBar position="sticky">
@@ -51,7 +51,7 @@ const Navbar = () => {
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
-          <InputBase placeholder="search..." />
+          <InputBase placeholder="search..." color="danger" />
         </Search>
         <IconContainer>
           <Badge badgeContent={4} color="error">

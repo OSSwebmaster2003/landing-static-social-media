@@ -7,7 +7,7 @@ import { useState } from "react";
 import Rightbar from "./components/RightBar";
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
 
   const darkTheme = createTheme({
     palette: {
@@ -17,7 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={"background.default"} color={"text.primary"}>
-        <Navbar />
+        <Navbar mode={mode} />
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar setMode={setMode} mode={mode} />
           <Feed />
